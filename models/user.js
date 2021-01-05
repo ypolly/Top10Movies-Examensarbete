@@ -41,8 +41,7 @@ const userSchema = new mongoose.Schema({
     timestamps: true
 });
 
-userSchema
-    .virtual('password')
+userSchema.virtual('password')
     .set(function (password) {
         this._password = password;
         this.salt = uuidv1();
@@ -53,10 +52,6 @@ userSchema
     });
 
 userSchema.methods = {
-    authenticate: function (plainText) {
-        return this.encryptPassword(plainText) === this.hashed_password;
-    },
-
     encryptPassword: function (password) {
         if (!password) return "";
         try {
