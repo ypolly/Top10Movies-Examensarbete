@@ -6,14 +6,16 @@ const cookieParser = require('cookie-parser')
 const expressValidator = require('express-validator')
 
 const app=express();
-const userRoutes = require('./routes/user')
 
-require('dotenv').config();
-// import mongoose
-// load env variables
+//require('dotenv').config();
 const dotenv = require('dotenv');
 dotenv.config()
- 
+const authRoutes = require('./routes/auth')
+const userRoutes = require('./routes/user')
+const categoryRoutes = require('./routes/category')
+const productRoutes = require('./routes/product')
+
+
 //db connection
 mongoose.connect(
   process.env.MONGO_URI,
@@ -28,7 +30,14 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(expressValidator());
 
+
+app.use(bodyParser.urlencoded({ extended: false }));
+
+
+app.use('/api', authRoutes);
 app.use('/api', userRoutes);
+app.use('/api', categoryRoutes);
+app.use('/api', productRoutes);
 
 const port=process.env.PORT || 8000;
 
