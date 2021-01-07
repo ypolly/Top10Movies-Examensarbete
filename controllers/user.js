@@ -1,3 +1,4 @@
+const { isBuffer } = require('lodash');
 const User =  require('../models/user');
 
 exports.userById =(req, res, next, id) => {
@@ -10,3 +11,25 @@ exports.userById =(req, res, next, id) => {
     }
     
     )};
+
+    exports.read= (req, res) => {
+        req.profile.hashed_passsword = undefined;
+        req.profile.salt = undefined;
+
+        return res.json(req.profile);
+    };
+
+    exports.update = (req, res) => {
+        User,findIneAndUpdate({ _id: req.profile._id}, {$set: req.body}, {new: true},
+            (err, user) => {
+                if(err) {
+                    return res.status(400).json({
+                        error: "You are not authorized to perform this action"
+                    })
+                }
+                user.hashed_passsword = undefined;
+                user.salt = undefined;
+                res.json(user);
+
+            });
+    }
