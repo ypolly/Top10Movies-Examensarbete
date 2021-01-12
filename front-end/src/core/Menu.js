@@ -60,8 +60,10 @@ const Menu = ({ history }) => (
         <li className="nav-item">
                         <Link
                             className="nav-link"
-                            style={isActive(history, "/signup")}
-                            to="/signup"
+                            style={{cursor: 'pointer', color: '#ffffff'}}
+                            onClick={() => signout(() => {
+                                history.push('/');
+                            })}
                         >
                             Signup
                         </Link>
