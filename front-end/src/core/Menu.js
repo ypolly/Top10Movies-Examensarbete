@@ -11,7 +11,7 @@ import {isAuthenticated, signout} from '../auth';
 
 const Menu = ({ history }) => (
     <div>
-        <ul className="nav nav-tabs bg-warning d-flex justify-content-center">
+        <ul className="nav nav-tabs bg-warning d-flex justify-content-end">
             <li className="nav-item">
                 <Link
                     className="nav-link"
