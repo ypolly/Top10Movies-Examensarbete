@@ -1,6 +1,6 @@
 import React from "react";
 //import Menu from "./Menu";
-//import "../styles.css";
+import "../styles.css";
 
 const Layout = ({
     title = "Title",
@@ -10,7 +10,7 @@ const Layout = ({
 }) => (
     <div>
        
-        <div className="jumbotron">
+        <div className="jumbotron d-flex justify-content-center">
             <h2>{title}</h2>
             <p className="lead">{description}</p>
         </div>
