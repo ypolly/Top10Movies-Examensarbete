@@ -73,9 +73,9 @@ const Signup = () => {
 
     return (
         <Layout
-            title="Signup"
-            description="Signup to Node React E-commerce App"
-            className="container col-md-8 offset-md-2"
+            title=""
+            description="Please sign up below to receive to become a member and receive newsletter"
+            className="container col-md-4 offset-md-4"
         >
             {showSuccess()}
             {showError()}

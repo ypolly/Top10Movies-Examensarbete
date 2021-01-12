@@ -2,7 +2,7 @@ import { Link, withRouter } from "react-router-dom";
               
  const isActive = (history, path) => {
     if (history.location.pathname === path) {
-        return { color: "#ff9900" };
+        return { color: "#CC0033" };
     } else {
         return { color: "#ffffff" };
     }
@@ -10,7 +10,7 @@ import { Link, withRouter } from "react-router-dom";
 
 const Menu = ({ history }) => (
     <div>
-        <ul className="nav nav-tabs bg-primary">
+        <ul className="nav nav-tabs bg-warning d-flex justify-content-end">
             <li className="nav-item">
                 <Link
                     className="nav-link"
