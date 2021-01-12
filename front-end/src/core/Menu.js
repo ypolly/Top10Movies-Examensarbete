@@ -10,7 +10,7 @@ import { Link, withRouter } from "react-router-dom";
 
 const Menu = ({ history }) => (
     <div>
-        <ul className="nav nav-tabs bg-warning d-flex justify-content-end">
+        <ul className="nav nav-tabs bg-warning d-flex justify-content-center">
             <li className="nav-item">
                 <Link
                     className="nav-link"
