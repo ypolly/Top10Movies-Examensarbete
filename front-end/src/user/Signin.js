@@ -12,7 +12,7 @@ const Signin = () => {
         redirectToReferrer: false
     });
 
-    const {  email, password, loading, redirectToReferrer, error } = values;
+    const {  email, password, loading, error, redirectToReferrer } = values;
     const {user}=isAuthenticated();
 
     const handleChange = name => event => {
