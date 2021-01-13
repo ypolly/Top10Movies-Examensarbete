@@ -3,7 +3,7 @@ import Layout from '../core/Layout';
 import {isAuthenticated} from '../auth';
 import {Link} from "react-router-dom";
 
-const AdminDashboard = () => { 
+const AdminAccount = () => { 
 
     const {user: {_id, name, email, role}} = isAuthenticated();
 
@@ -42,7 +42,7 @@ const AdminDashboard = () => {
 
  
     return (
-        <Layout title="Dashboard" description={`Good day, ${name}`} className="container-fluid">
+        <Layout title="Account" description={`Good day, ${name}`} className="container-fluid">
          <div class="row">
         <div class="col-3">
             {adminLinks()}
@@ -56,4 +56,4 @@ const AdminDashboard = () => {
     );
 };
 
-export default AdminDashboard;
+export default AdminAccount;

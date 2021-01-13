@@ -3,7 +3,7 @@ import Layout from '../core/Layout';
 import {isAuthenticated} from '../auth';
 import {Link} from "react-router-dom";
 
-const Dashboard = () => { 
+const Account = () => { 
 
     const {user: {_id, name, email, role}} = isAuthenticated();
 
@@ -51,7 +51,7 @@ const Dashboard = () => {
         )
     };
     return (
-        <Layout title="Dashboard" description={`Good day, ${name}`} className="container-fluid">
+        <Layout title="Account" description={`Good day, ${name}`} className="container-fluid">
          <div class="row">
         <div class="col-3">
             {userLinks()}
@@ -66,4 +66,4 @@ const Dashboard = () => {
     );
 };
 
-export default Dashboard;
+export default Account;
