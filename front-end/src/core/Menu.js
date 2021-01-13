@@ -28,7 +28,7 @@ const Menu = ({ history }) => (
                         style={isActive(history, "/user/dashboard")}
                         to="/user/dashboard"
                     >
-                        Dashboard
+                        Admin
                     </Link>
                 </li>
             { !isAuthenticated() &&
