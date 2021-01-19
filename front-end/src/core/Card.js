@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Card = ({product}) => {
@@ -7,7 +6,7 @@ const Card = ({product}) => {
       <div className="card">
         <div className="card-header">{product.name}</div>
         <div className="card-body">
-          <p>{product.description}</p>
+          <p>{product.description}{product.description.substring(0, 100)}</p>
           <p>{product.price}</p>
           <Link to="/">
             <button className="btn btn-outline-primary mt-2 mb-2">
