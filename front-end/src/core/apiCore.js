@@ -12,7 +12,6 @@ export const getProducts = sortBy => {
         .catch(err => console.log(err));
 };
 
-export const read = (productId) => {
 export const getCategories = () => {
     return fetch(`${API}/categories`, {
         method: "GET"
