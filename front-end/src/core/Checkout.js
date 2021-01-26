@@ -81,20 +81,20 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
                         };
 
                         createOrder(userId, token, createOrderData)
-                            .then(response => {
-                                emptyCart(() => {
-                                    setRun(!run); 
-                                    console.log('payment success and empty cart');
-                                    setData({
-                                        loading: false,
-                                        success: true
+                                .then(response => {
+                                    emptyCart(() => {
+                                        setRun(!run); // run useEffect in parent Cart
+                                        console.log('payment success and empty cart');
+                                        setData({
+                                            loading: false,
+                                            success: true
+                                        });
                                     });
+                                })
+                                .catch(error => {
+                                    console.log(error);
+                                    setData({ loading: false });
                                 });
-                            })
-                            .catch(error => {
-                                console.log(error);
-                                setData({ loading: false });
-                            });
                     })
                     .catch(error => {
                         console.log(error);
@@ -123,9 +123,7 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
                     <DropIn
                         options={{
                             authorization: data.clientToken,
-                            paypal: {
-                                flow: 'vault'
-                            }
+                           
                         }}
                         onInstance={instance => (data.instance = instance)}
                     />
