@@ -21,12 +21,12 @@ const AdminAccount = () => {
                         <Link className="nav-link" to="/create/product">
                             Create Product
                         </Link>
-                    </li>
-                    <li className="list-group-item">
-                        <Link className="nav-link" to="/admin/products">
-                            Manage Products
+                        </li>
+                        <li className="list-group-item">
+                        <Link className="nav-link" to="/admin/Orders">
+                            Show Orders
                         </Link>
-                    </li>
+                        </li>
                 </ul>
             </div>
         )
