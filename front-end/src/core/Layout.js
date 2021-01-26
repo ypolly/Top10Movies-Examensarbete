@@ -10,7 +10,7 @@ const Layout = ({
 }) => (
     <div>
        
-        <div className="jumbotron d-flex justify-content-center">
+        <div className="d-flex justify-content-center">
             <h2>{title}</h2>
             <p className="lead">{description}</p>
         </div>

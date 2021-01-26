@@ -97,10 +97,12 @@ const Shop = () => {
 
     return (
         <Layout
-            title="Shop Page"
-            description="Search and find movies of your choice"
+            title="Shop"
+            description=""
             className="container-fluid"
         >
+            <h2 className="customheader mb-4 d-flex justify-content-center">Find a movie of your choice</h2>
+            <div className="mainprcontainer d-flex justify-content-center">
             <div className="row">
                 <div className="col-4">
                     <h4>Filter by categories</h4>
@@ -136,6 +138,7 @@ const Shop = () => {
                     <hr />
                     {loadMoreButton()}
                 </div>
+            </div>
             </div>
         </Layout>
     );

@@ -73,10 +73,13 @@ const Signup = () => {
 
     return (
         <Layout
-            title=""
-            description="Please sign up below to receive to become a member and receive newsletter"
+            title="Singup"
+            description=""
             className="container col-md-4 offset-md-4"
         >
+
+            <h2 className="customheader mb-4 d-flex justify-content-center">and become a memeber</h2>
+
             {showSuccess()}
             {showError()}
             {signUpForm()}

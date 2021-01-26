@@ -1,3 +1,68 @@
+
+.caontainercaro {
+    width: 100%;
+    
+}
+
+.App {
+    
+    height: 550px;
+    font-family: sans-serif;
+    text-align: center;
+    
+    
+  }
+
+  .customcarousel {
+      width: 1200px;
+      height: 500px;
+  }
+  
+
+.customheader {
+
+color: #ee7752;    
+
+}
+
+
+.customnav {
+    height: 100px;
+    background-color: #77C3EC;    
+    
+    }
+    
+.customsearchcontainer {
+
+    width: 100%;
+}
+
+.customsearchfield {
+    width: 800px;
+    
+}
+
+.customsearchform {
+    height: 40px;
+    
+}
+
+.customsearchbtn {
+    height: 30px;
+    width: 100px;
+    
+}
+
+.mainprcontainer {
+    width: 100%;
+}
+
+.customproductcontainer {
+    width: 1200px;
+}
+
+
+
 .black-10 {
     background: #f2f2f2;
 }
@@ -70,3 +135,5 @@
         background-position: 0% 50%;
     }
 }
+
+

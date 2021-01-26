@@ -78,9 +78,12 @@ const Signin = () => {
     return (
         <Layout
             title="Signin"
-            description="Signin to Node React E-commerce App"
+            description=""
             className="container col-md-8 offset-md-2"
         >
+
+            <h2 className="customheader mb-4 d-flex justify-content-center">if you already have an account</h2>
+
             {showLoading()}
             {showError()}
             {signInForm()}

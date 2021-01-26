@@ -10,8 +10,8 @@ import {isAuthenticated, signout} from '../auth';
 };
 
 const Menu = ({ history }) => (
-    <div>
-        <ul className="nav nav-tabs bg-warning d-flex justify-content-end">
+    <div className="customnav">
+        <ul className=" customnav nav nav-tabs  d-flex justify-content-center align-content-center">
             <li className="nav-item">
                 <Link
                     className="nav-link"
