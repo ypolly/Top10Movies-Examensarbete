@@ -19,6 +19,8 @@ import UpdateCategory from './admin/updateCategory';
 import Shop from './core/Shop';
 import Cart from './core/Cart';
 import Orders from './admin/Orders';
+import Profile from './user/Profile';
+
 
 
 
@@ -46,6 +48,7 @@ const Routes = () => {
                 <PrivateRoute path="/admin/category/update/:categoryId" exact component={UpdateCategory} />
                 <Route path="/cart" exact component={Cart} />
                 <AdminRoute path="/admin/orders" exact component={Orders} />
+                <PrivateRoute path="/profile/:userId" exact component={Profile} />
 
             </Switch>
         </BrowserRouter>
