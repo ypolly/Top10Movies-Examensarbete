@@ -14,6 +14,9 @@ import Product from './core/Product';
 import ManageProducts from './admin/ManageProducts';
 import UpdateProduct from './admin/UpdateProduct';
 import UpdateCategory from './admin/updateCategory';
+import NotFoundPage from './core/NotFoundPage';
+
+
 
 
 import Shop from './core/Shop';
@@ -49,7 +52,7 @@ const Routes = () => {
                 <Route path="/cart" exact component={Cart} />
                 <AdminRoute path="/admin/orders" exact component={Orders} />
                 <PrivateRoute path="/profile/:userId" exact component={Profile} />
-
+                <Route path="*" component={NotFoundPage} />
             </Switch>
         </BrowserRouter>
     );
