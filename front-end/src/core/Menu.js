@@ -32,6 +32,24 @@ const Menu = ({ history }) => (
                     Shop
                 </Link>
             </li>
+            <li className="nav-item">
+                <Link
+                    className="nav-link"
+                    style={isActive(history, "/aboutus")}
+                    to="/aboutus"
+                >
+                    About Us
+                </Link>
+            </li>
+            <li className="nav-item">
+                <Link
+                    className="nav-link"
+                    style={isActive(history, "/contactus")}
+                    to="/contactus"
+                >
+                    Contact Us
+                </Link>
+            </li>
 
 
             <li className="nav-item">

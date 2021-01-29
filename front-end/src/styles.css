@@ -1,4 +1,28 @@
 
+
+.textpagescontainer {
+    width: 100%;
+}
+
+.textpages {
+    background-color: #c9e0ee;
+    width: 600px;
+    border-radius: 10px;
+
+}
+
+
+.container-fluid {
+    width: 100%;
+    padding: 0;
+    
+}
+
+.cartcontainer {
+    min-height: 100vh;
+}
+
+
 .caontainercaro {
     width: 100%;
     
@@ -55,13 +79,21 @@ color: #ee7752;
 
 .mainprcontainer {
     width: 100%;
+    padding: 30px;
 }
 
 .customproductcontainer {
     width: 1200px;
 }
 
-
+.main-footer {
+    color: black;
+    background-color: #9DD9F3;
+    padding-top: 3em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
 
 .black-10 {
     background: #f2f2f2;
@@ -91,10 +123,10 @@ color: #ee7752;
 .cart-badge,
 .cart-badge:hover {
     border-radius: 50%;
-    padding: 2px;
+    padding: 3px;
     font-size: 12px;
     font-style: italic;
-    background: #000;
+    background: rgb(247, 210, 4);
 }
 
 
