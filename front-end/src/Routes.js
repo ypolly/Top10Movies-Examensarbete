@@ -14,6 +14,9 @@ import Product from './core/Product';
 import ManageProducts from './admin/ManageProducts';
 import UpdateProduct from './admin/UpdateProduct';
 import UpdateCategory from './admin/updateCategory';
+import NotFoundPage from './core/NotFoundPage';
+
+
 
 
 import Shop from './core/Shop';
