@@ -51,10 +51,20 @@ color: #ee7752;
 
 
 .customnav {
-    height: 100px;
+ 
     background-color: #77C3EC;    
+    min-height: 15vh;
+    padding-right: 150px;
+    padding-left: 150px;
+   
+
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
     
-    }
+    
+}
     
 .customsearchcontainer {
 
@@ -177,4 +187,19 @@ color: #ee7752;
     }
 }
 
+@media only screen and (max-width: 500px) {
+    .customcarousel {
+        width: 350px;
+        height: 300px;
+    }
+    .App {
+        height: 350px;
+    }
 
+    .customnav {
+        background-color: #77C3EC;
+        min-height: 15vh;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+  }
