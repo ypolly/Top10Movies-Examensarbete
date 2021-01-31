@@ -78,3 +78,11 @@ export const emptyCart = next => {
     }
 };
 
+export const getShipping = () => {
+    if (typeof window !== 'undefined') {
+        if (localStorage.getItem('shipping')) {
+            return JSON.parse(localStorage.getItem('shipping'));
+        }
+    }
+    return [];
+};
