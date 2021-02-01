@@ -4,6 +4,7 @@ import { getProducts } from './apiCore';
 import Card from './Card';
 import Search from './Search';
 import { Carousel } from "react-bootstrap";
+import Footer from './footer';
 
 
 const Home = () => {
@@ -90,7 +91,7 @@ return (
     <div className="customproductcontainer ">
     <div className="row">
         {productsByArrival.map((product, i) => (
-            <div key={i} className="col-4 mb-3">
+            <div key={i} className="col-lg-4 col-xs-1 mb-3">
                 <Card product={product} />
             </div>
         ))}
@@ -99,14 +100,16 @@ return (
     <h2 className="customheader mb-4 d-flex justify-content-center">Best Sellers</h2>
     <div className="row">
         {productsBySell.map((product, i) => (
-            <div key={i} className="col-4 mb-3">
+            <div key={i} className="col-lg-4 col-xs-1 mb-3">
                 <Card product={product} />
             </div>
         ))}
     </div>
     </div>
     </div>
-</Layout>
+<Footer />
+    
+</Layout>    
 
 );
 

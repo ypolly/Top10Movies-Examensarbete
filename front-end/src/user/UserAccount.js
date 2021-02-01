@@ -3,6 +3,7 @@ import Layout from '../core/Layout';
 import {isAuthenticated} from '../auth';
 import {Link} from "react-router-dom";
 
+
 const Account = () => { 
 
     const {user: {_id, name, email, role}} = isAuthenticated();
@@ -62,6 +63,7 @@ const Account = () => {
             {PurchaseHistory()}
         </div>
          </div>
+       
         </Layout>
     );
 };

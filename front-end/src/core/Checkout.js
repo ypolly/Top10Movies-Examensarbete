@@ -6,14 +6,15 @@ import { isAuthenticated } from '../auth';
 import { Link } from 'react-router-dom';
 import DropIn from 'braintree-web-drop-in-react';
 
-const Checkout = ({ products, setRun = f => f, run = undefined }) => {
+
+const Checkout = ({ products, setRun = f => f, run = undefined, shipping }) => {
     const [data, setData] = useState({
         loading: false,
         success: false,
         clientToken: null,
         error: '',
         instance: {},
-        address: ''
+        address: '',
     });
 
     const userId = isAuthenticated() && isAuthenticated().user._id;
@@ -66,7 +67,7 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
                 nonce = data.nonce;
                 const paymentData = {
                     paymentMethodNonce: nonce,
-                    amount: getTotal(products)
+                    amount: getTotal(products)+1*shipping
                 };
 
                 processPayment(userId, token, paymentData)
@@ -151,7 +152,7 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
 
     return (
         <div>
-            <h2>Total: ${getTotal()}</h2>
+            <h2>Total: ${getTotal()+1*shipping}</h2>
             {showLoading(data.loading)}
             {showSuccess(data.success)}
             {showError(data.error)}

@@ -5,6 +5,7 @@ import { getCategories, getFilteredProducts } from "./apiCore";
 import Checkbox from "./Checkbox";
 import RadioBox from "./RadioBox";
 import { prices } from "./FixedPrices";
+import Footer from './footer';
 
 const Shop = () => {
     const [myFilters, setMyFilters] = useState({
@@ -104,7 +105,7 @@ const Shop = () => {
             <h2 className="customheader mb-4 d-flex justify-content-center">Find a movie of your choice</h2>
             <div className="mainprcontainer d-flex justify-content-center">
             <div className="row">
-                <div className="col-4">
+                <div className="col-3">
                     <h4>Filter by categories</h4>
                     <ul>
                         <Checkbox
@@ -126,7 +127,7 @@ const Shop = () => {
                     </div>
                 </div>
 
-                <div className="col-8">
+                <div className="col-9">
                     <h2 className="mb-4">Products</h2>
                     <div className="row">
                         {filteredResults.map((product, i) => (
@@ -140,6 +141,7 @@ const Shop = () => {
                 </div>
             </div>
             </div>
+            <Footer />
         </Layout>
     );
 };

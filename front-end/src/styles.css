@@ -1,4 +1,28 @@
 
+
+.textpagescontainer {
+    width: 100%;
+}
+
+.textpages {
+    background-color: #c9e0ee;
+    width: 600px;
+    border-radius: 10px;
+
+}
+
+
+.container-fluid {
+    width: 100%;
+    padding: 0;
+    
+}
+
+.cartcontainer {
+    min-height: 100vh;
+}
+
+
 .caontainercaro {
     width: 100%;
     
@@ -27,10 +51,20 @@ color: #ee7752;
 
 
 .customnav {
-    height: 100px;
+ 
     background-color: #77C3EC;    
+    min-height: 15vh;
+    padding-right: 150px;
+    padding-left: 150px;
+   
+
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
     
-    }
+    
+}
     
 .customsearchcontainer {
 
@@ -55,13 +89,21 @@ color: #ee7752;
 
 .mainprcontainer {
     width: 100%;
+    padding: 30px;
 }
 
 .customproductcontainer {
     width: 1200px;
 }
 
-
+.main-footer {
+    color: black;
+    background-color: #9DD9F3;
+    padding-top: 3em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
 
 .black-10 {
     background: #f2f2f2;
@@ -91,10 +133,10 @@ color: #ee7752;
 .cart-badge,
 .cart-badge:hover {
     border-radius: 50%;
-    padding: 2px;
+    padding: 3px;
     font-size: 12px;
     font-style: italic;
-    background: #000;
+    background: rgb(247, 210, 4);
 }
 
 
@@ -145,4 +187,19 @@ color: #ee7752;
     }
 }
 
+@media only screen and (max-width: 500px) {
+    .customcarousel {
+        width: 350px;
+        height: 300px;
+    }
+    .App {
+        height: 350px;
+    }
 
+    .customnav {
+        background-color: #77C3EC;
+        min-height: 15vh;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+  }

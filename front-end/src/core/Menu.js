@@ -1,7 +1,14 @@
 import { Link, withRouter } from "react-router-dom";
 import {isAuthenticated, signout} from '../auth';
 import { itemTotal } from "./cartHelpers";
-
+import {
+    Navbar,
+    Nav,
+    Form,
+    FormControl,
+    NavDropdown,
+    Button
+  } from "react-bootstrap";
               
  const isActive = (history, path) => {
     if (history.location.pathname === path) {
@@ -11,31 +18,45 @@ import { itemTotal } from "./cartHelpers";
     }
 };
 
+
+
 const Menu = ({ history }) => (
-    <div className="customnav">
-        <ul className=" customnav nav nav-tabs  d-flex justify-content-center align-content-center">
-            <li className="nav-item">
-                <Link
+
+<Navbar className="customnav"  expand="lg">
+      <Navbar.Brand href="#home">Top10Movies-Demo Store</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto">
+          
+            <Link
                     className="nav-link"
                     style={isActive(history, "/")}
                     to="/"
                 >
                     Home
-                </Link>
-            </li>
-            <li className="nav-item">
-                <Link
+            </Link>
+            <Link
                     className="nav-link"
                     style={isActive(history, "/shop")}
                     to="/shop"
                 >
                     Shop
-                </Link>
-            </li>
-
-
-            <li className="nav-item">
-                <Link
+            </Link>
+            <Link
+                    className="nav-link"
+                    style={isActive(history, "/aboutus")}
+                    to="/aboutus"
+                >
+                    About Us
+            </Link>
+            <Link
+                    className="nav-link"
+                    style={isActive(history, "/contactus")}
+                    to="/contactus"
+                >
+                    Contact Us
+            </Link>
+            <Link
                     className="nav-link"
                     style={isActive(history, "/cart")}
                     to="/cart"
@@ -44,11 +65,9 @@ const Menu = ({ history }) => (
                     <sup>
                         <small className="cart-badge">{itemTotal()}</small>
                     </sup>
-                </Link>
-            </li>
-
+            </Link>
             {isAuthenticated() && isAuthenticated().user.role === 0 && (
-                <li className="nav-item">
+               
                     <Link
                         className="nav-link"
                         style={isActive(history, "/user/account")}
@@ -56,11 +75,11 @@ const Menu = ({ history }) => (
                     >
                         Account
                     </Link>
-                </li>
+               
             )}
 
             {isAuthenticated() && isAuthenticated().user.role === 1 && (
-                <li className="nav-item">
+               
                     <Link
                         className="nav-link"
                         style={isActive(history, "/admin/account")}
@@ -68,11 +87,11 @@ const Menu = ({ history }) => (
                     >
                         Account
                     </Link>
-                </li>
+               
             )}
             { !isAuthenticated() &&
             <>  
-                <li className="nav-item">
+              
             <Link
                 className="nav-link"
                 style={isActive(history, "/signin")}
@@ -80,9 +99,9 @@ const Menu = ({ history }) => (
             >
                 Signin
             </Link>
-        </li>
+       
         
-        <li className="nav-item">
+      
                         <Link
                             className="nav-link"
                             style={isActive(history, "/signup")}
@@ -90,13 +109,13 @@ const Menu = ({ history }) => (
                         >
                             Signup
                         </Link>
-                    </li>
+                   
         </>}
                   
  
                     {isAuthenticated() &&
                   (<>
-                    <li className="nav-item">
+                    
                         <span
                             className="nav-link"
                             style={{cursor: 'pointer', color: '#ffffff'}}
@@ -106,11 +125,15 @@ const Menu = ({ history }) => (
                         >
                             Signout
                         </span>
-                    </li> 
+                   
                     </>) }
-        </ul>
-       
-    </div>
+          
+          
+        </Nav>
+        
+      </Navbar.Collapse>
+    </Navbar>
+           
 );
 
 export default withRouter(Menu);

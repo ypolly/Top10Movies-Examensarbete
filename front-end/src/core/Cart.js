@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from './Layout';
-import { getCart, removeItem } from './cartHelpers';
+import { getCart, removeItem ,getShipping} from './cartHelpers';
 import Card from './Card';
 import Checkout from './Checkout';
+import Footer from '../core/footer';
+import  Shipping from './Shipping';
+
 
 const Cart = () => {
     const [items, setItems] = useState([]);
+    const [shipping, setShipping] = useState('');
+
     const [run, setRun] = useState(false);
 
     useEffect(() => {
         setItems(getCart());
+        setShipping(getShipping())
     }, [run]);
 
     const showItems = items => {
@@ -48,15 +54,21 @@ const Cart = () => {
             description="Manage your cart items. Add remove checkout or continue shopping."
             className="container-fluid"
         >
+            <div className="cartcontainer">
             <div className="row">
                 <div className="col-6">{items.length > 0 ? showItems(items) : noItemsMessage()}</div>
 
                 <div className="col-6">
+                <Shipping setRun={setRun}
+                        run={run}/>
+
                     <h2 className="mb-4">Your cart summary</h2>
                     <hr />
-                    <Checkout products={items}/>
+                    <Checkout products={items} shipping={shipping} />
                 </div>
             </div>
+        </div>
+        <Footer />
         </Layout>
     );
 };
