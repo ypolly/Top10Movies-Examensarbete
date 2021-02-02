@@ -57,13 +57,14 @@ const Account = () => {
          className="container-fluid">
     
          <div class="row">
-        <div class="col-3">
-            {userLinks()}
-        </div>
+        
 
-        <div class="col-9">
+        <div class="col-lg-6 col-sm-12">
             {UserInfo()}
             {PurchaseHistory()}
+        </div>
+        <div class="col-lg-6 col-sm-12">
+            {userLinks()}
         </div>
          </div>
        
