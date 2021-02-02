@@ -12,6 +12,7 @@ const Card = ({product,
   cartUpdate=false,
   showRemoveProductButton=false,
   setRun = f => f,
+  showDetails=true,
   run = undefined
 }) => {
 
@@ -31,7 +32,7 @@ const Card = ({product,
       showViewProductButton && (
         <Link to={`/product/${product._id}`} className="mr-2">
         <button className="btn btn-outline-primary mt-2 mb-2">
-        View, Product
+        View Product
       </button>
       </Link>
       )
@@ -108,14 +109,16 @@ const Card = ({product,
         <ShowImage item={product} url="product" />
           {/* <p className="lead mt-2">{product.description.substring(0, 100)}</p> */}
           <p className="balck-10">{product.price}</p>
-          <p className="black-9">Category: {product.category && product.category.name}</p>
+          { showDetails && (<><p className="black-9">Category: {product.category && product.category.name}</p>
           <p className="black-8">Added on {moment(product.createdAt).fromNow()}</p>
           {showStock(product.quantity)}
           <br/>
+          </>)}
+          
+          {showRemoveButton(showRemoveProductButton)}
           {showViewButton(showViewProductButton)}
           {showAddToCartBtn(showAddToCartButton)}
           {showCartUpdateOptions(cartUpdate)}
-          {showRemoveButton(showRemoveProductButton)}
 
     
         </div>

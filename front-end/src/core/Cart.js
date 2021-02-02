@@ -34,7 +34,7 @@ const Cart = () => {
                         run={run}
                         cartUpdate={true}
                         showRemoveProductButton={true}
-
+                        showDetails={false}
 
                     />
                 ))}
