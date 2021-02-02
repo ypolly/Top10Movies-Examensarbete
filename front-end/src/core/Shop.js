@@ -98,16 +98,20 @@ const Shop = () => {
 
     return (
         <Layout
-            title="Shop"
+            title=""
             description=""
             className="container-fluid"
         >
+             <h2 className="customheader mb-4 d-flex justify-content-center">Shop</h2>
             <h2 className="customheader mb-4 d-flex justify-content-center">Find a movie of your choice</h2>
             <div className="mainprcontainer d-flex justify-content-center">
-            <div className="row">
-                <div className="col-3">
+            <div className="customproductcontainer  ">
+
+            <div className="row shopcontainer">
+                <div className="filters col-3">
+                    
                     <h4>Filter by categories</h4>
-                    <ul>
+                    <ul className="shoppagelist">
                         <Checkbox
                             categories={categories}
                             handleFilters={filters =>
@@ -115,9 +119,9 @@ const Shop = () => {
                             }
                         />
                     </ul>
-
+                    
                     <h4>Filter by price range</h4>
-                    <div>
+                    <div className="shoppagelist">
                         <RadioBox
                             prices={prices}
                             handleFilters={filters =>
@@ -127,11 +131,11 @@ const Shop = () => {
                     </div>
                 </div>
 
-                <div className="col-9">
+                <div className="col-9 productresponsive">
                     <h2 className="mb-4">Products</h2>
                     <div className="row">
                         {filteredResults.map((product, i) => (
-                            <div key={i} className="col-4 mb-3">
+                            <div key={i} className="col-lg-4 mb-3">
                                 <Card product={product} />
                             </div>
                         ))}
@@ -139,6 +143,7 @@ const Shop = () => {
                     <hr />
                     {loadMoreButton()}
                 </div>
+            </div>
             </div>
             </div>
             <Footer />

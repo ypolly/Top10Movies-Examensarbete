@@ -51,23 +51,26 @@ const Cart = () => {
     return (
         <Layout
             title="Shopping Cart"
-            description="Manage your cart items. Add remove checkout or continue shopping."
+            description=""
             className="container-fluid"
         >
-            <div className="cartcontainer">
-            <div className="row">
-                <div className="col-6">{items.length > 0 ? showItems(items) : noItemsMessage()}</div>
+            <div className="cartcontainer d-flex justify-content-center">
+                <div className="cart-secondcontainter row ">
 
-                <div className="col-6">
-                <Shipping setRun={setRun}
+                    <div className="cart-items col-4">
+                        {items.length > 0 ? showItems(items) : noItemsMessage()}
+                    </div>
+
+                    <div className="col-8">
+                    <Shipping setRun={setRun}
                         run={run}/>
 
                     <h2 className="mb-4">Your cart summary</h2>
                     <hr />
                     <Checkout products={items} shipping={shipping} />
+                    </div>
                 </div>
             </div>
-        </div>
         <Footer />
         </Layout>
     );

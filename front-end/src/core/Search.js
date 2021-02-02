@@ -104,7 +104,7 @@ const Search = () => {
                     />
                 </div>
                 <div
-                    className="btn input-group-append"
+                    className="btn btnpadding input-group-append"
                     style={{ border: "none" }}
                 >
                     <button className="customsearchbtn input-group-text justify-content-center">Search</button>

@@ -46,7 +46,7 @@ return (
     description=""
     className="container-fluid"
 >
-
+    <div className="maincontainer">
     <Search />
 
     <div className="caontainercaro d-flex justify-content-center">
@@ -86,12 +86,12 @@ return (
     </div>
 
 
-    <h2 className="customheader mb-4 d-flex justify-content-center">New Arrivals</h2>
+    <h2 className="customheader mb-4 d-flex justify-content-center">Top 10 This Month</h2>
     <div className="mainprcontainer d-flex justify-content-center">
     <div className="customproductcontainer ">
     <div className="row">
         {productsByArrival.map((product, i) => (
-            <div key={i} className="col-lg-4 col-xs-1 mb-3">
+            <div key={i} className="col-lg-3 col-xs-1 mb-3">
                 <Card product={product} />
             </div>
         ))}
@@ -100,16 +100,16 @@ return (
     <h2 className="customheader mb-4 d-flex justify-content-center">Best Sellers</h2>
     <div className="row">
         {productsBySell.map((product, i) => (
-            <div key={i} className="col-lg-4 col-xs-1 mb-3">
+            <div key={i} className="col-lg-3 col-xs-1 mb-3">
                 <Card product={product} />
             </div>
         ))}
     </div>
     </div>
     </div>
-<Footer />
-    
-</Layout>    
+    <Footer />
+   </div> 
+    </ Layout>    
 
 );
 

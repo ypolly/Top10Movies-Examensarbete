@@ -102,31 +102,31 @@ const Menu = ({ history }) => (
        
         
       
-                        <Link
-                            className="nav-link"
-                            style={isActive(history, "/signup")}
-                            to="/signup"
-                        >
-                            Signup
-                        </Link>
+            <Link
+                className="nav-link"
+                style={isActive(history, "/signup")}
+                to="/signup"
+            >
+                Signup
+            </Link>
                    
         </>}
                   
  
-                    {isAuthenticated() &&
-                  (<>
-                    
-                        <span
-                            className="nav-link"
-                            style={{cursor: 'pointer', color: '#ffffff'}}
-                            onClick={() => signout(() => {
-                                history.push('/');
-                            })}
-                        >
-                            Signout
-                        </span>
-                   
-                    </>) }
+          {isAuthenticated() &&
+        (<>
+          
+              <span
+                  className="nav-link"
+                  style={{cursor: 'pointer', color: '#ffffff'}}
+                  onClick={() => signout(() => {
+                      history.push('/');
+                  })}
+              >
+                  Signout
+              </span>
+          
+          </>) }
           
           
         </Nav>
