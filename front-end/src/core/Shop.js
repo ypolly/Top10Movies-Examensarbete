@@ -6,6 +6,8 @@ import Checkbox from "./Checkbox";
 import RadioBox from "./RadioBox";
 import { prices } from "./FixedPrices";
 import Footer from './footer';
+import Search from './Search';
+
 
 const Shop = () => {
     const [myFilters, setMyFilters] = useState({
@@ -103,7 +105,7 @@ const Shop = () => {
             className="container-fluid"
         >
              <h2 className="customheader mb-4 d-flex justify-content-center">Shop</h2>
-            <h2 className="customheader mb-4 d-flex justify-content-center">Find a movie of your choice</h2>
+            <Search />
             <div className="mainprcontainer d-flex justify-content-center">
             <div className="customproductcontainer  ">
 
@@ -120,15 +122,6 @@ const Shop = () => {
                         />
                     </ul>
                     
-                    <h4>Filter by price range</h4>
-                    <div className="shoppagelist">
-                        <RadioBox
-                            prices={prices}
-                            handleFilters={filters =>
-                                handleFilters(filters, "price")
-                            }
-                        />
-                    </div>
                 </div>
 
                 <div className="col-9 productresponsive">
