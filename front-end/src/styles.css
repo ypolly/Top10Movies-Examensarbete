@@ -151,8 +151,12 @@ input.customsearchform.form-control {
 	
   }
 
-
-
+/*admin and user page */ 
+  .lead {
+    font-size: 25px;
+    font-weight: 300;
+    padding-left: 5px;
+}
 
 
 
@@ -312,5 +316,11 @@ input.customsearchform.form-control {
     }
     .cart-items {
         width: 395px;
+    }
+
+    .lead {
+        font-size: 20px;
+        font-weight: 300;
+        padding-left: 5px;
     }
   }

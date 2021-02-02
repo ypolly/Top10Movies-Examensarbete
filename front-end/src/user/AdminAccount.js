@@ -52,15 +52,18 @@ const AdminAccount = () => {
 
  
     return (
-        <Layout title="Account" description={`Good day, ${name}`} className="container-fluid">
-         <div class="row">
-        <div class="col-3">
+        <Layout title="Account:" 
+        description={` welcome   ${name}`} 
+        className="container-fluid">
+         <div class="'column'">
+        <div class="col-lg-3 col-sm-12">
+            {adminInfo()}
+        </div>    
+        <div class="col-lg-3 col-sm-12">
             {adminLinks()}
         </div>
 
-        <div class="col-9">
-            {adminInfo()}
-        </div>
+        
          </div>
         </Layout>
     );

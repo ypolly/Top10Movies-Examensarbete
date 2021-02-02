@@ -52,7 +52,10 @@ const Account = () => {
         )
     };
     return (
-        <Layout title="Account" description={`Good day, ${name}`} className="container-fluid">
+        <Layout title="Account"
+         description={`${name}`} 
+         className="container-fluid">
+    
          <div class="row">
         <div class="col-3">
             {userLinks()}
