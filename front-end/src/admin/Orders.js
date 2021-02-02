@@ -160,7 +160,7 @@ const Orders = () => {
                                 ))}
                             </div>
                         );
-                    })}
+                    }).reverse()}
                 </div>
             </div>
         </Layout>

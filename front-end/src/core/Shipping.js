@@ -70,21 +70,21 @@ const handleChange = event => {
 <>
         <h4>Choose the delivery method </h4>
         <div>
-          <input type='radio' value={Delivery[0].price} id={Delivery[0].name}   name="shipping"// label="Postnord" 
+          <input type='radio' value={Delivery[0].price} id={Delivery[0].name} className='form-check-input'  name="shipping"// label="Postnord" 
           onChange={handleChange}
           //checked={this.state.selectedDeliveryMethod === "PostNord"}
           />
-          <label for={Delivery[0].name}>{Delivery[0].name}</label>
+          <label for={Delivery[0].name}> {Delivery[0].name}</label>
           </div>
             <div>
-          <input type='radio' value={Delivery[1].price} name="shipping" // label="DHL"
+          <input type='radio' value={Delivery[1].price} name="shipping" className='form-check-input'
            onChange={handleChange} />
-           <label for={Delivery[1].name}>{Delivery[1].name}</label>
+           <label for={Delivery[1].name}> {Delivery[1].name}</label>
            </div>
            <div>
-          <input type='radio' value={Delivery[2].price} name="shipping"//label="Schenker" 
+           <input type='radio' value={Delivery[2].price} name="shipping" className='form-check-input' 
           onChange={handleChange} />
-            <label for={Delivery[2].name}>{Delivery[2].name}</label>
+            <label for={Delivery[2].name}>{ Delivery[2].name}</label>
 
         </div>
           

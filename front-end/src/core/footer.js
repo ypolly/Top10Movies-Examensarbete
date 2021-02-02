@@ -20,20 +20,20 @@ const Footer = () => {
           {/* Column2 */}
           <div className="col">
             <h4>LInks</h4>
-            <ui className="list-unstyled">
+            <ul className="list-unstyled">
               <li>AAAAAAAAAAA</li>
               <li>BBBBBBBBBBBB</li>
               <li>CCCCCCCCCC</li>
-            </ui>
+            </ul>
           </div>
           {/* Column3 */}
           <div className="col">
             <h4>Social Media</h4>
-            <ui className="list-unstyled">
+            <ul className="list-unstyled">
               <li>AAAAAAAAAAA</li>
               <li>BBBBBBBBBBB</li>
               <li>CCCCCCCCCCC</li>
-            </ui>
+            </ul>
           </div>
         </div>
         <hr />
