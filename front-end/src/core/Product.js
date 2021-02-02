@@ -44,19 +44,18 @@ const Product = (props) => {
         className="container-fluid"
 >
     
-    <div className="row">
-    <div className="col-8">
+    <div className="column d-flex justify-content-center">
+                <div className="row-6">
                     {product && product.description && <Card product={product} showViewProductButton={false} />}
                 </div>
 
-                <div className="col-4">
-                    <h4>Related products</h4>
+                <div className="row-6">
                     {relatedProduct.map((p, i) => (
                         <div className="mb-3" key={i}>
                             <Card product={p} />
                         </div>
                     ))}
-                    </div>
+                </div>
     </div>
 
 </Layout>
