@@ -23,7 +23,7 @@ import {
 const Menu = ({ history }) => (
 
 <Navbar className="customnav"  expand="lg">
-      <Navbar.Brand href="#home">Top10Movies-Demo Store</Navbar.Brand>
+      <Navbar.Brand href="#home"><h2 classsName="logo">Top10Movies</h2></Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">

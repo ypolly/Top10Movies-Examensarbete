@@ -8,19 +8,19 @@ const Footer = () => {
   return (
     <div className="main-footer">
       <div className="footercontainer">
-        <div className="row">
+        <div className="footercolumns row">
           {/* Column1 */}
           <div className="col">
-            <h4>Top 10 Movies</h4>
-            <h4 className="list-unstyled">
+            <h5>Top 10 Movies</h5>
+            <h8 className="list-unstyled">
               <li>342-420-6969</li>
               <li>Gothenburg</li>
               <li>123 Streeet South North</li>
-            </h4>
+            </h8>
           </div>
           {/* Column2 */}
           <div className="col">
-            <h4>Links</h4>
+            <h5>Links</h5>
             <ul className="list-unstyled">
               <li><Link to="/privacy">Privacy Policy</Link></li>
               <li><Link to="/aboutUs">About us</Link></li>
@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
           {/* Column3 */}
           <div className="col">
-            <h4>Social Media</h4>
+            <h5>Social Media</h5>
             <ul className="list-unstyled">
               <li>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
