@@ -15,6 +15,8 @@ import ManageProducts from './admin/ManageProducts';
 import UpdateProduct from './admin/UpdateProduct';
 import UpdateCategory from './admin/updateCategory';
 import NotFoundPage from './core/NotFoundPage';
+import Footer from './core/footer'
+
 
 
 
@@ -25,6 +27,7 @@ import Orders from './admin/Orders';
 import Profile from './user/Profile';
 import AboutUs from './core/AboutUs';
 import ContactUs from './core/ContactUs';
+import PrivacyPolicy from './core/PrivacyPolicy';
 
 
 
@@ -55,8 +58,10 @@ const Routes = () => {
                 <PrivateRoute path="/profile/:userId" exact component={Profile} />
                 <Route path="/aboutus" exact component={AboutUs} />
                 <Route path="/contactus" exact component={ContactUs} />
+                <Route path="/privacy" exact component={PrivacyPolicy} />
 
             </Switch>
+            <Footer/>
         </BrowserRouter>
     );
 };
