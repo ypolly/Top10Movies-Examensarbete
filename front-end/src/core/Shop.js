@@ -5,7 +5,6 @@ import { getCategories, getFilteredProducts } from "./apiCore";
 import Checkbox from "./Checkbox";
 import RadioBox from "./RadioBox";
 import { prices } from "./FixedPrices";
-import Footer from './footer';
 import Search from './Search';
 
 
@@ -139,7 +138,7 @@ const Shop = () => {
             </div>
             </div>
             </div>
-            <Footer />
+           
         </Layout>
     );
 };

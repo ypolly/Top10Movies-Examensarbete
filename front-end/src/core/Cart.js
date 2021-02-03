@@ -4,7 +4,7 @@ import Layout from './Layout';
 import { getCart, removeItem ,getShipping} from './cartHelpers';
 import Card from './Card';
 import Checkout from './Checkout';
-import Footer from '../core/footer';
+
 import  Shipping from './Shipping';
 
 
@@ -71,7 +71,7 @@ const Cart = () => {
                     </div>
                 </div>
             </div>
-        <Footer />
+       
         </Layout>
     );
 };
