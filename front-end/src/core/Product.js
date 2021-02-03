@@ -2,6 +2,8 @@ import React, {useState, useEffect} from "react";
 import Layout from './Layout';
 import { read, listRelated } from './apiCore';
 import Card from './Card';
+import SingleProduct from './SingleProduct';
+
 import { addItem, updateItem, removeItem } from './cartHelpers';
 
 
@@ -20,13 +22,6 @@ const Product = (props) => {
                 setError(data.error);
             } else {
                 setProduct(data);
-                // listRelated(data._id).then(data => {
-                //     if (data.error) {
-                //         setError(data.error);
-                //     } else {
-                //         setRelatedProduct(data);
-                //     }
-                // });
             }
         });
     };
@@ -44,9 +39,9 @@ const Product = (props) => {
         className="container-fluid"
 >
 {/* justify-content-center */}
-    <div className="column d-flex ">
+    <div className="d-flex justify-content-center">
                 <div className="row-6">
-                    {product && product.description && <Card product={product} showViewProductButton={false} />}
+                    {product && product.description && <SingleProduct product={product} showViewProductButton={false} />}
                 </div>
                 <p style={{margin: '20px'}}>{product && product.description && product.description.substring(0, 100)}</p>
                 {/* <div className="row-6">
