@@ -22,6 +22,7 @@ const Footer = () => {
           <div className="col">
             <h4>Links</h4>
             <ul className="list-unstyled">
+              <li><Link to="/privacy">Privacy Policy</Link></li>
               <li><Link to="/aboutUs">About us</Link></li>
               <li><Link to="/contactUs">Contact us</Link></li>
             </ul>
