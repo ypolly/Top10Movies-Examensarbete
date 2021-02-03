@@ -20,13 +20,13 @@ const Product = (props) => {
                 setError(data.error);
             } else {
                 setProduct(data);
-                listRelated(data._id).then(data => {
-                    if (data.error) {
-                        setError(data.error);
-                    } else {
-                        setRelatedProduct(data);
-                    }
-                });
+                // listRelated(data._id).then(data => {
+                //     if (data.error) {
+                //         setError(data.error);
+                //     } else {
+                //         setRelatedProduct(data);
+                //     }
+                // });
             }
         });
     };
@@ -40,22 +40,22 @@ const Product = (props) => {
     return (
         <Layout
         title={product && product.name}
-        description={product && product.description && product.description.substring(0, 100)}
+       description=''//{product && product.description && product.description.substring(0, 100)}
         className="container-fluid"
 >
-    
-    <div className="column d-flex justify-content-center">
+{/* justify-content-center */}
+    <div className="column d-flex ">
                 <div className="row-6">
                     {product && product.description && <Card product={product} showViewProductButton={false} />}
                 </div>
-
-                <div className="row-6">
+                <p style={{margin: '20px'}}>{product && product.description && product.description.substring(0, 100)}</p>
+                {/* <div className="row-6">
                     {relatedProduct.map((p, i) => (
                         <div className="mb-3" key={i}>
                             <Card product={p} />
                         </div>
                     ))}
-                </div>
+                </div> */}
     </div>
 
 </Layout>
