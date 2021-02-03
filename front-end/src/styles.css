@@ -38,11 +38,12 @@
 }
 
 .cart-secondcontainter {
-    
+    padding: 30px;
     width: 800px;
 }
 
 .cart-items {
+   
     
 }
 
@@ -319,6 +320,7 @@ input.customsearchform.form-control {
 
     .cart-secondcontainter {
         width: 500px;
+        padding: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
