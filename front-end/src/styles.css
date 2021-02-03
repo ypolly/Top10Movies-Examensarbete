@@ -152,8 +152,11 @@ input.customsearchform.form-control {
   .shoppagelist {
 
     padding-left: 0px;
-   
 	
+  }
+
+  .shopcontainer {
+      margin-top: -50px;
   }
 
 /*admin and user page */ 

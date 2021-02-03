@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles.css";
 import Layout from '../core/Layout';
-
+import Footer from './footer';
 
 const AboutUs = () => {
 
@@ -9,6 +9,11 @@ const AboutUs = () => {
     <Layout title="About Us" description="">
     <div className="textpagescontainer  d-flex justify-content-center ">
     <div className="textpages row">
+    <img
+            className="customcarouse d-block w-100"
+            src="/images/aboutus.jpg"
+            alt="First slide"
+          />
         
         <p>This project is the final exam project for the university studies, presented to Medieinstitute located in Gothenburg Sweden. </p>
         <p>Under the program by the Medieinstitute which is a vocational university, the focus has been to develop websites and platforms focused on ecommerce.</p>
@@ -22,9 +27,10 @@ const AboutUs = () => {
 
 
 
-
+<Footer />
           
     </Layout>
+    
 );
 };
 export default AboutUs;
