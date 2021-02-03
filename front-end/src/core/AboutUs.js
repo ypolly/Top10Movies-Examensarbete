@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles.css";
 import Layout from '../core/Layout';
-import Footer from './footer';
 
 const AboutUs = () => {
 
@@ -27,7 +26,7 @@ const AboutUs = () => {
 
 
 
-<Footer />
+
           
     </Layout>
     
