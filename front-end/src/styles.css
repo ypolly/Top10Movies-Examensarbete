@@ -321,9 +321,14 @@ input.customsearchform.form-control {
         width: 500px;
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
     .cart-items {
         width: 395px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .lead {

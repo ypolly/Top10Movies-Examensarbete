@@ -12,7 +12,7 @@ const ContactUs = () => {
     <div className="textpages row">
     <img
             className="customcarouse d-block w-100"
-            src="/images/contactus1.png"
+            src="/images/contactusbanner.jpg"
             alt="First slide"
           />
         
