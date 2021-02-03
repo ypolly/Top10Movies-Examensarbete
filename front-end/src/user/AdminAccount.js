@@ -40,7 +40,7 @@ const AdminAccount = () => {
     const adminInfo =()=>{
         return (
             <div className="card mb-5">
-            <h3 class="card-header">User Information</h3>
+            <h3 className="card-header">User Information</h3>
             <ul className="list-group">
                 <li className="list-group-item">{name}</li>
                 <li className="list-group-item">{email}</li>
@@ -52,18 +52,15 @@ const AdminAccount = () => {
 
  
     return (
-        <Layout title="Account:" 
-        description={` welcome   ${name}`} 
-        className="container-fluid">
-         <div class="'column'">
-        <div class="col-lg-3 col-sm-12">
-            {adminInfo()}
-        </div>    
-        <div class="col-lg-3 col-sm-12">
+        <Layout title="Account" description={`Good day, ${name}`} className="container-fluid">
+         <div className="row">
+        <div className="col-3">
             {adminLinks()}
         </div>
 
-        
+        <div className="col-9">
+            {adminInfo()}
+        </div>
          </div>
         </Layout>
     );

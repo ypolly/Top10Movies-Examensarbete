@@ -34,7 +34,7 @@ router.get("/products/search", listSearch);
 router.delete("/product/create/:userId", requireSignin, isAuth, isAdmin, remove);
 router.put("/product/:productId/:userId", requireSignin, isAuth, isAdmin, update);
 router.get("/products", list);
-router.get("/products/related/:productId", listRelated);
+//router.get("/products/related/:productId", listRelated);
 router.get("/products/category", listCategories);
 router.post("/products/by/search", listBySearch);
 router.get("/product/photo/:productId", photo);

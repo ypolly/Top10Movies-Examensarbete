@@ -31,7 +31,7 @@ const Account = () => {
     const UserInfo =()=>{
         return (
             <div className="card mb-5">
-            <h3 class="card-header">User Information</h3>
+            <h3 className="card-header">User Information</h3>
             <ul className="list-group">
                 <li className="list-group-item">{name}</li>
                 <li className="list-group-item">{email}</li>
@@ -52,19 +52,15 @@ const Account = () => {
         )
     };
     return (
-        <Layout title="Account"
-         description={`${name}`} 
-         className="container-fluid">
-    
-         <div class="row">
-        
+        <Layout title="Account" description={`Good day, ${name}`} className="container-fluid">
+         <div className="row">
+        <div className="col-3">
+            {userLinks()}
+        </div>
 
-        <div class="col-lg-6 col-sm-12">
+        <div className="col-9">
             {UserInfo()}
             {PurchaseHistory()}
-        </div>
-        <div class="col-lg-6 col-sm-12">
-            {userLinks()}
         </div>
          </div>
        
