@@ -10,15 +10,15 @@ const Footer = () => {
       <div className="footercontainer">
         <div className="footercolumns row">
           <div className="col">
-            <h5>Top 10 Movies</h5>
-            <h6 className="list-unstyled">
+            <h5 className="coltitle">Top 10 Movies</h5>
+            <h8 className="list-unstyled">
               <li>342-420-6969</li>
               <li>Gothenburg</li>
               <li>123 Streeet South North</li>
             </h6>
           </div>
           <div className="col">
-            <h5>Links</h5>
+            <h5 className="coltitle">Links</h5>
             <ul className="list-unstyled">
               <li><Link to="/privacy">Privacy Policy</Link></li>
               <li><Link to="/aboutUs">About us</Link></li>
@@ -26,7 +26,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col">
-            <h5>Social Media</h5>
+            <h5 className="coltitle">Social Media</h5>
             <ul className="list-unstyled">
               <li>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-facebook" viewBox="0 0 16 16">
@@ -49,8 +49,7 @@ const Footer = () => {
         <hr />
         <div className="row">
           <p className="col-sm">
-            &copy;{new Date().getFullYear()} Top10Movies | All rights reserved |
-            Terms Of Service | Privacy
+            &copy;{new Date().getFullYear()} Top10Movies | All rights reserved
           </p>
         </div>
       </div>

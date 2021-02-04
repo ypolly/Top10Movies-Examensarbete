@@ -119,11 +119,11 @@ const Shop = () => {
                     
                 </div>
 
-                <div className="col-9 productresponsive">
+                <div className="col-lg-9  productresponsive">
                     <h2 className="mb-4">Products</h2>
                     <div className="row">
                         {filteredResults.map((product, i) => (
-                            <div key={i} className="col-lg-4 mb-3">
+                            <div key={i} className="col-lg-4 col-md-5 mb-3">
                                 <Card product={product} />
                             </div>
                         ))}

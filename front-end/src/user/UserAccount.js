@@ -52,17 +52,19 @@ const Account = () => {
         )
     };
     return (
-        <Layout title="Account" description={`Good day, ${name}`} className="container-fluid">
-         <div className="row">
-        <div className="col-3">
-            {userLinks()}
-        </div>
+        <Layout title="Account" description={`welcome, ${name}`} className="container-fluid">
+         <div className="useraccount column">
 
-        <div className="col-9">
+        <div className="col-lg-3 col-sm-12">
             {UserInfo()}
             {PurchaseHistory()}
         </div>
-         </div>
+
+         <div className="col-lg-3 col-sm-12">
+            {userLinks()}
+        </div>
+
+        </div>
        
         </Layout>
     );

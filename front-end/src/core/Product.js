@@ -40,8 +40,14 @@ const Product = (props) => {
                 <div className="row-6">
                     {product && product.description && <SingleProduct product={product} showViewProductButton={false} />}
                 </div>
-                <p style={{margin: '20px'}}>{product && product.description && product.description.substring(0, 100)}</p>
-
+                <p className="prdescription">{product && product.description && product.description.substring(0, 800)}</p>
+                {/* <div className="row-6">
+                    {relatedProduct.map((p, i) => (
+                        <div className="mb-3" key={i}>
+                            <Card product={p} />
+                        </div>
+                    ))}
+                </div> */}
     </div>
 
 </Layout>
