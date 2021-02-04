@@ -3,8 +3,7 @@ import Layout from '../core/Layout';
 import { isAuthenticated } from '../auth';
 import { Link, Redirect } from 'react-router-dom';
 import { getCategory, updateCategory } from './apiAdmin';
-// {category: ["5cd0258f2793ec6e100bc191"], price: []}
-// http://localhost:3000/admin/category/update/5cd0258f2793ec6e100bc191
+
 const UpdateCategory = ({ match }) => {
     const [values, setValues] = useState({
         name: '',
@@ -13,7 +12,6 @@ const UpdateCategory = ({ match }) => {
         formData: ''
     });
 
-    // destructure user and token from localStorage
     const { user, token } = isAuthenticated();
 
     const { name, error, redirectToProfile } = values;
@@ -23,7 +21,6 @@ const UpdateCategory = ({ match }) => {
             if (data.error) {
                 setValues({ ...values, error: data.error });
             } else {
-                // populate the state
                 setValues({
                     ...values,
                     name: data.name
@@ -42,7 +39,6 @@ const UpdateCategory = ({ match }) => {
 
     const submitCategoryForm = e => {
         e.preventDefault();
-        // update with ? you should send category name otherwise what to update?
         const category = {
             name: name
         };

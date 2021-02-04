@@ -3,11 +3,7 @@ import {isAuthenticated, signout} from '../auth';
 import { itemTotal } from "./cartHelpers";
 import {
     Navbar,
-    Nav,
-    Form,
-    FormControl,
-    NavDropdown,
-    Button
+    Nav
   } from "react-bootstrap";
               
  const isActive = (history, path) => {

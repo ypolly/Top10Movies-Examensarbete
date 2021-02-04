@@ -8,7 +8,6 @@ const cors = require('cors');
 
 const app=express();
 
-//require('dotenv').config();
 const dotenv = require('dotenv');
 dotenv.config()
 const authRoutes = require('./routes/auth')
@@ -19,7 +18,7 @@ const braintreeRoutes = require('./routes/braintree')
 const orderRoutes = require('./routes/order')
 
 
-//db connection
+
 mongoose.connect(
   process.env.MONGO_URI,
   {useNewUrlParser: true, 

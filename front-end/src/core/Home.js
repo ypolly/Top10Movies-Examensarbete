@@ -4,7 +4,6 @@ import { getProducts } from './apiCore';
 import Card from './Card';
 import Search from './Search';
 import { Carousel } from "react-bootstrap";
-import Footer from './footer';
 
 
 const Home = () => {

@@ -1,4 +1,3 @@
-import { promises } from 'fs';
 import React, { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import ShowImage from './ShowImage';
@@ -21,7 +20,7 @@ const Card = ({product,
   const [count, setCount] = useState(product.count);
 
   const handleChange = productId => event => {
-    setRun(!run); // run useEffect in parent Cart
+    setRun(!run); 
     setCount(event.target.value < 1 ? 1 : event.target.value);
     if (event.target.value >= 1) {
       updateItem(productId, event.target.value);
@@ -46,7 +45,6 @@ const Card = ({product,
   };
 
   const addToCart = () => {
-   // console.log('added');
     addItem(product, setRedirect(true));
   };
   
@@ -56,7 +54,7 @@ const Card = ({product,
         <button
           onClick={() => {
             removeItem(product._id);
-            setRun(!run); // run useEffect in parent Cart
+            setRun(!run); 
           }}
           className="btn btn-outline-danger mt-2 mb-2"
         >
@@ -120,7 +118,6 @@ const Card = ({product,
 
         {cart ? <><ShowImage item={product} url="product" cart="true"/></> : 
         <><ShowImage item={product} url="product"/></>}
-          {/* <p className="lead mt-2">{product.description.substring(0, 100)}</p> */}
           <p className="text-info balck-10">{product.price} SEK</p>
           { showDetails && (<><p className="black-9">Category: {product.category && product.category.name}</p>
           <p className="black-8">Added on {moment(product.createdAt).fromNow()}</p>

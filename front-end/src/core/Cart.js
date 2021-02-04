@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from './Layout';
-import { getCart, removeItem ,getShipping} from './cartHelpers';
+import { getCart, getShipping} from './cartHelpers';
 import Card from './Card';
 import Checkout from './Checkout';
 import  Shipping from './Shipping';

@@ -1,4 +1,3 @@
-import { fstat } from 'fs';
 import { API } from '../config';
 
 export const signup = user => {

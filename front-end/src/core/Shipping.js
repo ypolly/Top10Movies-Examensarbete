@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { chooseShipping } from './cartHelpers';
 
 
 
@@ -72,7 +71,6 @@ const handleChange = event => {
         <div>
           <input type='radio' value={Delivery[0].price} id={Delivery[0].name} className='form-check-input'  name="shipping"// label="Postnord" 
           onChange={handleChange}
-          //checked={this.state.selectedDeliveryMethod === "PostNord"}
           />
           <label for={Delivery[0].name}> {Delivery[0].name}</label>
           </div>

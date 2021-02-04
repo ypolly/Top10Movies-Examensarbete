@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '../core/Layout';
 import { isAuthenticated } from '../auth';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { read, update, updateUser } from './apiUser';
 
 const Profile = ({ match }) => {
@@ -38,7 +38,6 @@ const Profile = ({ match }) => {
         e.preventDefault();
         update(match.params.userId, token, { name, email, password }).then(data => {
             if (data.error) {
-                // console.log(data.error);
                 alert(data.error);
             } else {
                 updateUser(data, () => {

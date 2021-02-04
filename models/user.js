@@ -1,10 +1,8 @@
 const mongoose = require('mongoose');
 const crypto = require('crypto');
-//const uuidv1 = require('uuid/v1');
 const { v1: uuidv1 } = require('uuid');
 
-// const { v1: uuidv1 } = require('uuid');
-// uuidv1(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
+
 
 
 const userSchema = new mongoose.Schema(
@@ -42,7 +40,6 @@ const userSchema = new mongoose.Schema(
     { timestamps: true }
 );
 
-// virtual field
 userSchema
     .virtual('password')
     .set(function(password) {

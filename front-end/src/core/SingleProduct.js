@@ -1,9 +1,8 @@
 import { promises } from 'fs';
 import React, { useState } from 'react';
-import { Link, Redirect } from 'react-router-dom';
 import ShowImage from './ShowImage';
 import moment from 'moment';
-import { addItem, updateItem, removeItem} from './cartHelpers';
+import { addItem } from './cartHelpers';
 
 
 const SingleProduct = ({product
@@ -30,10 +29,8 @@ const SingleProduct = ({product
   return(
   
       <div className="d-flex justify-content-center">
-        {/* <div className="card-header card-header-1">{product.name}</div> */}
         <div>
         <ShowImage item={product} url="product" />
-          {/* <p className="lead mt-2">{product.description.substring(0, 100)}</p> */}
           <p className="balck-10">{product.price} SEK</p>
           <p className="black-9">Category: {product.category && product.category.name}</p>
           <p className="black-8">Added on {moment(product.createdAt).fromNow()}</p>

@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const {ObjectId} = mongoose.Schema
-// const { v1: uuidv1 } = require('uuid');
-// uuidv1(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
+
 
 
 const productSchema = new mongoose.Schema(
