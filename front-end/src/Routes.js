@@ -15,7 +15,6 @@ import ManageProducts from './admin/ManageProducts';
 import UpdateProduct from './admin/UpdateProduct';
 import UpdateCategory from './admin/updateCategory';
 import NotFoundPage from './core/NotFoundPage';
-import Footer from './core/footer'
 
 
 
@@ -59,7 +58,7 @@ const Routes = () => {
                 <Route path="/aboutus" exact component={AboutUs} />
                 <Route path="/contactus" exact component={ContactUs} />
                 <Route path="/privacy" exact component={PrivacyPolicy} />
-
+                <Route path="*" component={NotFoundPage} />
             </Switch>
           
         </BrowserRouter>
