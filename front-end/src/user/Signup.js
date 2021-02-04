@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../core/Layout';
 import { signup } from '../auth';
+import Footer from '../core/footer';
 
 const Signup = () => {
     const [values, setValues] = useState({
@@ -72,6 +73,7 @@ const Signup = () => {
     );
 
     return (
+       
         <Layout
             title="Singup"
             description=""
@@ -83,7 +85,9 @@ const Signup = () => {
             {showSuccess()}
             {showError()}
             {signUpForm()}
+           
         </Layout>
+         
     );
 };
 

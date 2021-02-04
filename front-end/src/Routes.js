@@ -61,7 +61,7 @@ const Routes = () => {
                 <Route path="/privacy" exact component={PrivacyPolicy} />
 
             </Switch>
-            <Footer/>
+          
         </BrowserRouter>
     );
 };
