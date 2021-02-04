@@ -28,7 +28,6 @@ const Search = () => {
     }, []);
 
     const searchData = () => {
-        // console.log(search, category);
         if (search) {
             list({ search: search || undefined, category: category }).then(
                 response => {
@@ -104,7 +103,7 @@ const Search = () => {
                     />
                 </div>
                 <div
-                    className="btn input-group-append"
+                    className="btn btnpadding input-group-append"
                     style={{ border: "none" }}
                 >
                     <button className="customsearchbtn input-group-text justify-content-center">Search</button>

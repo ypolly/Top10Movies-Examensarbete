@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { chooseShipping } from './cartHelpers';
 
 
 
@@ -47,7 +46,7 @@ const handleChange = event => {
           <p>{Delivery[1].name}</p>
           <p>Waiting time: {Delivery[1].days} days</p>
           <p>Shipping fee: {Delivery[1].price} kr.</p>
-          <p>Expected delivery: {new Date(new Date().setDate(new Date().getDate() + Delivery[0].days)).toISOString().substring(0, 10)}</p>
+          <p>Expected delivery: {new Date(new Date().setDate(new Date().getDate() + Delivery[1].days)).toISOString().substring(0, 10)}</p>
         </div>
       </div>
       ) 
@@ -57,7 +56,7 @@ const handleChange = event => {
           <p>{Delivery[2].name}</p>
           <p>Waiting time: {Delivery[2].days} days</p>
           <p>Shipping fee: {Delivery[2].price} kr.</p>
-          <p>Expected delivery: {new Date(new Date().setDate(new Date().getDate() + Delivery[0].days)).toISOString().substring(0, 10)}</p>
+          <p>Expected delivery: {new Date(new Date().setDate(new Date().getDate() + Delivery[2].days)).toISOString().substring(0, 10)}</p>
         </div>
       </div>
       )
@@ -70,21 +69,20 @@ const handleChange = event => {
 <>
         <h4>Choose the delivery method </h4>
         <div>
-          <input type='radio' value={Delivery[0].price} id={Delivery[0].name}   name="shipping"// label="Postnord" 
+          <input type='radio' value={Delivery[0].price} id={Delivery[0].name} className='form-check-input'  name="shipping"// label="Postnord" 
           onChange={handleChange}
-          //checked={this.state.selectedDeliveryMethod === "PostNord"}
           />
-          <label for={Delivery[0].name}>{Delivery[0].name}</label>
+          <label for={Delivery[0].name}> {Delivery[0].name}</label>
           </div>
             <div>
-          <input type='radio' value={Delivery[1].price} name="shipping" // label="DHL"
+          <input type='radio' value={Delivery[1].price} name="shipping" className='form-check-input'
            onChange={handleChange} />
-           <label for={Delivery[1].name}>{Delivery[1].name}</label>
+           <label for={Delivery[1].name}> {Delivery[1].name}</label>
            </div>
            <div>
-          <input type='radio' value={Delivery[2].price} name="shipping"//label="Schenker" 
+           <input type='radio' value={Delivery[2].price} name="shipping" className='form-check-input' 
           onChange={handleChange} />
-            <label for={Delivery[2].name}>{Delivery[2].name}</label>
+            <label for={Delivery[2].name}>{ Delivery[2].name}</label>
 
         </div>
           

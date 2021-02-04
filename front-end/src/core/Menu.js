@@ -3,11 +3,7 @@ import {isAuthenticated, signout} from '../auth';
 import { itemTotal } from "./cartHelpers";
 import {
     Navbar,
-    Nav,
-    Form,
-    FormControl,
-    NavDropdown,
-    Button
+    Nav
   } from "react-bootstrap";
               
  const isActive = (history, path) => {
@@ -23,7 +19,7 @@ import {
 const Menu = ({ history }) => (
 
 <Navbar className="customnav"  expand="lg">
-      <Navbar.Brand href="#home">Top10Movies-Demo Store</Navbar.Brand>
+      <Navbar.Brand href="#home"><h2 classsname="logo">Top10Movies</h2></Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
@@ -102,31 +98,31 @@ const Menu = ({ history }) => (
        
         
       
-                        <Link
-                            className="nav-link"
-                            style={isActive(history, "/signup")}
-                            to="/signup"
-                        >
-                            Signup
-                        </Link>
+            <Link
+                className="nav-link"
+                style={isActive(history, "/signup")}
+                to="/signup"
+            >
+                Signup
+            </Link>
                    
         </>}
                   
  
-                    {isAuthenticated() &&
-                  (<>
-                    
-                        <span
-                            className="nav-link"
-                            style={{cursor: 'pointer', color: '#ffffff'}}
-                            onClick={() => signout(() => {
-                                history.push('/');
-                            })}
-                        >
-                            Signout
-                        </span>
-                   
-                    </>) }
+          {isAuthenticated() &&
+        (<>
+          
+              <span
+                  className="nav-link"
+                  style={{cursor: 'pointer', color: '#ffffff'}}
+                  onClick={() => signout(() => {
+                      history.push('/');
+                  })}
+              >
+                  Signout
+              </span>
+          
+          </>) }
           
           
         </Nav>

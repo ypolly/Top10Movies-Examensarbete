@@ -72,6 +72,7 @@ const Signup = () => {
     );
 
     return (
+       
         <Layout
             title="Singup"
             description=""
@@ -83,7 +84,9 @@ const Signup = () => {
             {showSuccess()}
             {showError()}
             {signUpForm()}
+           
         </Layout>
+         
     );
 };
 

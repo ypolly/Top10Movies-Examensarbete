@@ -20,7 +20,7 @@ exports.userById =(req, res, next, id) => {
     };
 
     exports.update = (req, res) => {
-        // console.log('UPDATE USER - req.user', req.user, 'UPDATE DATA', req.body);
+
         const { name, password } = req.body;
      
         User.findOne({ _id: req.profile._id }, (err, user) => {

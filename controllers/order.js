@@ -1,8 +1,11 @@
 const { Order, CartItem } = require('../models/order');
 const { errorHandler } = require('../helpers/dbErrorHandler');
-// sendgrid for email npm i @sendgrid/mail
+
+const dotenv = require('dotenv');
+dotenv.config()
+
 const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey('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');
+sgMail.setApiKey(process.env.EMAIL_KEY);
 
 exports.orderById = (req, res, next, id) => {
     Order.findById(id)
@@ -28,10 +31,7 @@ exports.create = (req, res) => {
                 error: errorHandler(error)
             });
         }
-        // send email alert to admin
-        // order.address
-        // order.products.length
-        // order.amount
+       
         const emailData = {
             to: 'kaloraat@gmail.com',
             from: 'noreply@ecommerce.com',
@@ -77,7 +77,6 @@ exports.updateOrderStatus = (req, res) => {
     });
 };
 
-// your create order method with email capabilities
 exports.create = (req, res) => {
     console.log('CREATE ORDER: ', req.body);
     req.body.order.user = req.profile;
@@ -88,14 +87,9 @@ exports.create = (req, res) => {
                 error: errorHandler(error)
             });
         }
-        // User.find({ categories: { $in: categories } }).exec((err, users) => {}
         console.log('ORDER IS JUST SAVED >>> ', order);
-        // send email alert to admin
-        // order.address
-        // order.products.length
-        // order.amount
         const emailData = {
-            to: 'pollyyaromchyk@gmail.com', // admin
+            to: 'pollyyaromchyk@gmail.com', 
             from: 'pollyyaromchyk@gmail.com',
             subject: `A new order is received`,
             html: `
@@ -127,7 +121,6 @@ exports.create = (req, res) => {
             .then(sent => console.log('SENT >>>', sent))
             .catch(err => console.log('ERR >>>', err));
  
-        // email to buyer
         const emailData2 = {
             to: order.user.email,
             from: 'pollyyaromchyk@gmail.com',

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '../core/Layout';
 import { isAuthenticated } from '../auth';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { getProduct, getCategories, updateProduct } from './apiAdmin';
 
 const UpdateProduct = ({ match }) => {
@@ -27,9 +27,6 @@ const UpdateProduct = ({ match }) => {
         name,
         description,
         price,
-        // categories,
-        category,
-        shipping,
         quantity,
         loading,
         error,
@@ -43,7 +40,6 @@ const UpdateProduct = ({ match }) => {
             if (data.error) {
                 setValues({ ...values, error: data.error });
             } else {
-                // populate the state
                 setValues({
                     ...values,
                     name: data.name,
@@ -54,13 +50,11 @@ const UpdateProduct = ({ match }) => {
                     quantity: data.quantity,
                     formData: new FormData()
                 });
-                // load categories
                 initCategories();
             }
         });
     };
 
-    // load categories and set form data
     const initCategories = () => {
         getCategories().then(data => {
             if (data.error) {
@@ -188,7 +182,7 @@ const UpdateProduct = ({ match }) => {
     };
 
     return (
-        <Layout title="Add a new product" description={`ood day ${user.name}, ready to add a new product?`}>
+        <Layout title="Add a new product" description={`${user.name}`}>
             <div className="row">
                 <div className="col-md-8 offset-md-2">
                     {showLoading()}

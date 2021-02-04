@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../core/Layout";
 import { isAuthenticated } from "../auth";
-import { Link } from "react-router-dom";
 import { listOrders, getStatusValues, updateOrderStatus } from "./apiAdmin";
 import moment from "moment";
 
@@ -94,7 +93,7 @@ const Orders = () => {
     return (
         <Layout
             title="Orders"
-            description={`G'day ${
+            description={`welcome ${
                 user.name
             }, you can manage all the orders here`}
             className="container-fluid"
@@ -160,7 +159,7 @@ const Orders = () => {
                                 ))}
                             </div>
                         );
-                    })}
+                    }).reverse()}
                 </div>
             </div>
         </Layout>

@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from './Layout';
-import { getCart, removeItem ,getShipping} from './cartHelpers';
+import { getCart, getShipping} from './cartHelpers';
 import Card from './Card';
 import Checkout from './Checkout';
-import Footer from '../core/footer';
 import  Shipping from './Shipping';
 
 
@@ -22,7 +21,7 @@ const Cart = () => {
     const showItems = items => {
         return (
             <div>
-                <h2>Your cart has {`${items.length}`} items</h2>
+                <h4>Your cart has {`${items.length}`} items</h4>
                 <hr />
                 {items.map((product, i) => (
                     <Card
@@ -34,7 +33,7 @@ const Cart = () => {
                         run={run}
                         cartUpdate={true}
                         showRemoveProductButton={true}
-
+                        showDetails={false}
 
                     />
                 ))}
@@ -43,32 +42,35 @@ const Cart = () => {
     };
 
     const noItemsMessage = () => (
-        <h2>
+        <h4>
             Your cart is empty. <br /> <Link to="/shop">Continue shopping</Link>
-        </h2>
+        </h4>
     );
 
     return (
         <Layout
             title="Shopping Cart"
-            description="Manage your cart items. Add remove checkout or continue shopping."
+            description=""
             className="container-fluid"
         >
-            <div className="cartcontainer">
-            <div className="row">
-                <div className="col-6">{items.length > 0 ? showItems(items) : noItemsMessage()}</div>
+            <div className="cartcontainer d-flex justify-content-center">
+                <div className="cart-secondcontainter row ">
 
-                <div className="col-6">
-                <Shipping setRun={setRun}
+                    <h4 className="cart-items col-4">
+                        {items.length > 0 ? showItems(items) : noItemsMessage()}
+                    </h4>
+
+                    <div className="col-8">
+                    <Shipping setRun={setRun}
                         run={run}/>
 
-                    <h2 className="mb-4">Your cart summary</h2>
+                    <h4 className="mb-4">Your cart summary</h4>
                     <hr />
                     <Checkout products={items} shipping={shipping} />
+                    </div>
                 </div>
             </div>
-        </div>
-        <Footer />
+       
         </Layout>
     );
 };

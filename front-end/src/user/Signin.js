@@ -79,7 +79,7 @@ const Signin = () => {
         <Layout
             title="Signin"
             description=""
-            className="container col-md-8 offset-md-2"
+            className="container col-md-4 offset-md-4"
         >
 
             <h2 className="customheader mb-4 d-flex justify-content-center">if you already have an account</h2>
