@@ -13,7 +13,8 @@ const Card = ({product,
   showRemoveProductButton=false,
   setRun = f => f,
   showDetails=true,
-  run = undefined
+  run = undefined,
+  cart= false
 }) => {
 
   const [redirect, setRedirect] = useState(false);
@@ -27,7 +28,7 @@ const Card = ({product,
     }
   };
 
-  const showViewButton = showViewProductButton => {
+  const showViewButton = (showViewProductButton, cartUpdate) => {
     return (
       showViewProductButton && (
         <Link to={`/product/${product._id}`} className="mr-2">
@@ -37,7 +38,7 @@ const Card = ({product,
           <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
         </svg>
         &nbsp;&nbsp;
-        View Product
+        {!cartUpdate && ' View Product'}
       </button>
       </Link>
       )
@@ -49,7 +50,7 @@ const Card = ({product,
     addItem(product, setRedirect(true));
   };
   
-  const showRemoveButton = showRemoveProductButton => {
+  const showRemoveButton = (showRemoveProductButton , cartUpdate)=> {
     return (
       showRemoveProductButton && (
         <button
@@ -64,7 +65,7 @@ const Card = ({product,
              <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"></path>
            </svg>
            &nbsp;&nbsp;
-          Remove Product 
+          {!cartUpdate && 'Remove Product'}
          
         </button>
       )
@@ -117,7 +118,8 @@ const Card = ({product,
         <div className="card-body">
         {shouldRedirect(redirect)}
 
-        <ShowImage item={product} url="product" />
+        {cart ? <><ShowImage item={product} url="product" cart="true"/></> : 
+        <><ShowImage item={product} url="product"/></>}
           {/* <p className="lead mt-2">{product.description.substring(0, 100)}</p> */}
           <p className="text-info balck-10">{product.price} SEK</p>
           { showDetails && (<><p className="black-9">Category: {product.category && product.category.name}</p>
@@ -126,8 +128,8 @@ const Card = ({product,
           <br/>
           </>)}
           
-          {showRemoveButton(showRemoveProductButton)}
-          {showViewButton(showViewProductButton)}
+          {showRemoveButton(showRemoveProductButton,cartUpdate)}
+          {showViewButton(showViewProductButton,cartUpdate)}
           {showAddToCartBtn(showAddToCartButton)}
           {showCartUpdateOptions(cartUpdate)}
 
