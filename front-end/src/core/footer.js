@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="footercolumns row">
           {/* Column1 */}
           <div className="col">
-            <h5>Top 10 Movies</h5>
+            <h5 className="coltitle">Top 10 Movies</h5>
             <h8 className="list-unstyled">
               <li>342-420-6969</li>
               <li>Gothenburg</li>
@@ -20,7 +20,7 @@ const Footer = () => {
           </div>
           {/* Column2 */}
           <div className="col">
-            <h5>Links</h5>
+            <h5 className="coltitle">Links</h5>
             <ul className="list-unstyled">
               <li><Link to="/privacy">Privacy Policy</Link></li>
               <li><Link to="/aboutUs">About us</Link></li>
@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
           {/* Column3 */}
           <div className="col">
-            <h5>Social Media</h5>
+            <h5 className="coltitle">Social Media</h5>
             <ul className="list-unstyled">
               <li>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
